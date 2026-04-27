@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.dependencies import get_db
+from app.dependencies import get_current_user, get_db
 from app.schemas.product import ProductCreate, ProductRead, ProductUpdate
 from app.services import category_service, product_service
 
 
-router = APIRouter(prefix="/api/products", tags=["products"])
+router = APIRouter(prefix="/api/products", tags=["products"], dependencies=[Depends(get_current_user)] )
 
 
 @router.post("", response_model=ProductRead, status_code=status.HTTP_201_CREATED)

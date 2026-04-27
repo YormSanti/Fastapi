@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.dependencies import get_db
+from app.dependencies import get_current_user, get_db
 from app.schemas.category import CategoryCreate, CategoryRead, CategoryUpdate, CategoryDelete
 from app.services import category_service
  
 
-router = APIRouter(prefix="/api/category", tags=["categories"])
+router = APIRouter(prefix="/api/category", tags=["categories"], dependencies=[Depends(get_current_user)])
 
 @router.post("", response_model=CategoryRead, status_code=status.HTTP_201_CREATED)
 def create_category(category: CategoryCreate, db: Session = Depends(get_db)):

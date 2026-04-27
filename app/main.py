@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from app.core.config import settings
-from app.routes import product, user, category
+from app.routes import product, user, category, auth
 
 
 
@@ -12,6 +12,7 @@ def create_app() -> FastAPI:
     app.include_router(user.router)
     app.include_router(product.router)
     app.include_router(category.router)
+    app.include_router(auth.router )
 
     @app.get("/")
     def root():
