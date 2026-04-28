@@ -1,18 +1,21 @@
 from fastapi import FastAPI
 
 from app.core.config import settings
-from app.routes import product, user, category, auth
+from app.middleware.authMiddleware import AuthenticationMiddleware
+from app.routes import auth_route, category_route, customer_route, product_route, user_route
 
 
 
 
 def create_app() -> FastAPI:
     app = FastAPI(title=settings.app_name)
+    app.add_middleware(AuthenticationMiddleware)
 
-    app.include_router(user.router)
-    app.include_router(product.router)
-    app.include_router(category.router)
-    app.include_router(auth.router )
+    app.include_router(user_route.router)
+    app.include_router(customer_route.router)
+    app.include_router(product_route.router)
+    app.include_router(category_route.router)
+    app.include_router(auth_route.router )
 
     @app.get("/")
     def root():
