@@ -21,6 +21,7 @@ class AuthenticationMiddleware(BaseHTTPMiddleware):
 
         if request.url.path in PUBLIC_PATHS or request.url.path.startswith("/auth"):
             return await call_next(request)
+        
 
         auth_header = request.headers.get("Authorization")
         if not auth_header:

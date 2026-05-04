@@ -1,5 +1,47 @@
-INFO:     127.0.0.1:62189 - "POST /auth/register HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62189 - "GET /api/customers HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51195 - "GET /api/customers HTTP/1.1" 200 OK
- INFO:     127.0.0.1:55793 - "GET /api/customers HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55793 - "GET /api/customers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60757 - "POST /auth/register HTTP/1.1" 200 OK
+Password reset OTP for otp-test-a58f62fd3eeb4236aea15a6dfcb86024@example.com: 622613
+INFO:     127.0.0.1:60757 - "POST /auth/forgot-password HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60757 - "POST /auth/reset-password-with-otp HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:60757 - "POST /auth/reset-password-with-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60757 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:60757 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60757 - "POST /auth/reset-password-with-otp HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:54005 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54005 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57490 - "GET /api/products HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57491 - "GET /api/products HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57492 - "GET /api/products HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:56052 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53040 - "GET /api/products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58128 - "GET /api/products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53041 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64069 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58134 - "POST /auth/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54749 - "GET /api/users HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:53259 - "GET /api/products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53260 - "GET /api/users HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:63981 - "GET /api/products HTTP/1.1" 200 OK
+Password reset OTP for yormsanti90@gmail.com: 712075
+INFO:     127.0.0.1:57664 - "POST /auth/forgot-password HTTP/1.1" 200 OK
+Password reset OTP for yormsanti90@gmail.com: 350061
+INFO:     127.0.0.1:58950 - "POST /auth/forgot-password HTTP/1.1" 200 OK
+Password reset OTP for yormsanti90@gmail.com: 083130
+INFO:     127.0.0.1:60471 - "POST /auth/forgot-password HTTP/1.1" 200 OK
+Password reset OTP for yormsanti90@gmail.com: 527893
+INFO:     127.0.0.1:51563 - "POST /auth/forgot-password HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59870 - "POST /auth/reset-password-with-otp HTTP/1.1" 400 Bad Request
+Password reset OTP for yormsanti90@gmail.com: 972184
+INFO:     127.0.0.1:49202 - "POST /auth/forgot-password HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52741 - "POST /auth/reset-password-with-otp HTTP/1.1" 400 Bad Request
+Password reset OTP for yormsanti90@gmail.com: 733051
+INFO:     127.0.0.1:52745 - "POST /auth/forgot-password HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59883 - "POST /auth/reset-password-with-otp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62056 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53847 - "POST /auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65131 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64616 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56584 - "GET /api/products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56585 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58978 - "GET /api/products HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57119 - "GET /api/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55241 - "GET /api/users HTTP/1.1" 200 OK

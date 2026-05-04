@@ -10,7 +10,10 @@ router = APIRouter(prefix="/api/products", tags=["products"], dependencies=[Depe
 
 
 @router.post("", response_model=ProductRead, status_code=status.HTTP_201_CREATED)
-async def create_product(product: ProductCreate, db: Session = Depends(get_db)):
+async def create_product(
+    product: ProductCreate,
+    db: Session = Depends(get_db),
+):
     if product.category_id is not None and category_service.get_category(db, product.category_id) is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -20,12 +23,19 @@ async def create_product(product: ProductCreate, db: Session = Depends(get_db)):
 
 
 @router.get("", response_model=list[ProductRead])
-async def read_products(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+async def read_products(
+    skip: int = 0,
+    limit: int = 100,
+    db: Session = Depends(get_db),
+):
     return product_service.get_products(db, skip=skip, limit=limit)
 
 
 @router.get("/{product_id}", response_model=ProductRead)
-async def read_product(product_id: int, db: Session = Depends(get_db)):
+async def read_product(
+    product_id: int,
+    db: Session = Depends(get_db),
+):
     product = product_service.get_product(db, product_id)
     if product is None:
         raise HTTPException(
@@ -60,7 +70,10 @@ async def update_product(
 
 
 @router.delete("/{product_id}", status_code=status.HTTP_204_NO_CONTENT)
-async def delete_product(product_id: int, db: Session = Depends(get_db)):
+async def delete_product(
+    product_id: int,
+    db: Session = Depends(get_db),
+):
     product = product_service.get_product(db, product_id)
     if product is None:
         raise HTTPException(

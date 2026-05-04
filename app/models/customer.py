@@ -1,5 +1,5 @@
 from sqlalchemy import DateTime, Integer, String, Boolean, Column, func
-
+from sqlalchemy.orm import relationship
 from app.core.database import Base
 
 class Customer(Base):
@@ -18,3 +18,4 @@ class Customer(Base):
         onupdate=func.now(),
         nullable=False,
     )
+    orders = relationship("Order", back_populates="customer")

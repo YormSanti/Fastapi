@@ -23,3 +23,4 @@ class Product(Base):
     )
 
     category = relationship("Category", back_populates="products")
+    order_details = relationship("OrderDetail", back_populates="product")
